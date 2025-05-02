@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Assistant</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 2em; background: #f0f2f5; }
+        input[type=text] { width: 80%; padding: 10px; }
+        input[type=submit] { padding: 10px 20px; }
+        .chatbox { margin-top: 20px; background: white; padding: 20px; border-radius: 10px; }
+    </style>
+</head>
+<body>
+    <h1>🤖 Smart Assistant</h1>
+    <form method="post">
+        <input type="text" name="user_input" placeholder="Ask me anything..." required>
+        <input type="submit" value="Ask">
+    </form>
+    {% if response %}
+    <div class="chatbox">
+        <strong>Assistant:</strong>
+        <p>{{ response }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
